@@ -1,0 +1,863 @@
+:root{
+	--lada-grean: #04A64B;
+	--lada-red: #E73137;
+	--lada-white: #fff;
+	--lada-font-gray: #7D7D7D;
+}
+
+
+/*
+bootstrap 5.2
+*/
+.btn-outline-success {
+    --bs-btn-color: var(--lada-grean);
+    --bs-btn-border-color: var(--lada-grean);
+    --bs-btn-hover-bg: var(--lada-grean);
+    --bs-btn-hover-border-color: var(--lada-grean);
+    --bs-btn-active-bg: var(--lada-grean);
+    --bs-btn-active-border-color: var(--lada-grean);
+}
+.btn-outline-danger {
+    --bs-btn-color: var(--lada-red);
+    --bs-btn-border-color: var(--lada-red);
+    --bs-btn-hover-bg: var(--lada-red);
+    --bs-btn-hover-border-color: var(--lada-red);
+    --bs-btn-active-bg: var(--lada-red);
+    --bs-btn-active-border-color: var(--lada-red);
+}
+.btn-danger {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--lada-red);;
+    --bs-btn-border-color: #dc3545;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb2d3b;
+    --bs-btn-hover-border-color: #b02a37;
+    --bs-btn-focus-shadow-rgb: 225,83,97;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #b02a37;
+    --bs-btn-active-border-color: #a52834;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-light {
+    --bs-btn-color: var(--lada-font-gray);
+    --bs-btn-bg: var(--lada-white);
+    --bs-btn-border-color: var(--lada-white);
+    --bs-btn-hover-color: var(--lada-font-gray);
+    --bs-btn-hover-bg: var(--lada-white);
+    --bs-btn-hover-border-color: var(--lada-white);
+    --bs-btn-focus-shadow-rgb: 225,83,97;
+    --bs-btn-active-color: var(--lada-font-gray);
+    --bs-btn-active-bg: var(--lada-white);
+    --bs-btn-active-border-color: var(--lada-white);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn{
+	height: 44px;
+	border-radius: 100px;
+	padding: 10px 20px 10px 20px;
+	--bs-btn-border-width: 2px;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+/*
+all style
+*/
+@font-face {
+	font-family: "BalsamiqSans";
+	src: url("../fonts/BalsamiqSans-Bold.ttf");
+}
+body {
+	background: #FAFAFA;
+}
+hr {
+	margin: 5px 0 0 0;
+	border-top: 0px;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+/*
+nav had
+*/
+.lada-hed {
+	background: #fff;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 99;
+}
+.lada-nav {
+	display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.lada-container-logo {
+	min-width: 170px;
+	text-decoration: none;
+}
+
+/*.lada-name {
+	font-family: "BalsamiqSans";
+    color: var(--lada-red);
+    font-size: 27px;
+    position: relative;
+    top: 3px;
+}*/
+
+.lada-btn-hed {
+	margin: 6px 0;
+	text-align: center;
+}
+.lada-btn-hed a{
+	margin: 2px 4px;
+}
+
+.lada-icon {
+	font-size: 25px;
+	color: var(--lada-grean);
+}
+
+.lada-items-center {
+	display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.lada-list-nav p {
+	font-size: 16px;
+	margin: 0;
+}
+.lang-active {
+	color: var(--lada-grean);
+    text-decoration: underline;
+}
+.lada-menu-had li {
+	list-style: none;
+    margin: 10px;
+}
+.lada-menu-had li a{
+	text-decoration: none;
+	position: relative;
+}
+.lada-menu-had li a::before {
+	content: '';
+	position: absolute;
+	height: 2px;
+	bottom: -2px;
+	background: var(--lada-grean);
+	width: 0;
+}
+.lada-menu-had li a:hover:before {
+	width: 100%;
+	transition: width 0.3s;
+}
+.lada-menu-btn {
+	border: 0;
+    background: #fff;
+    margin-right: 10px;
+    display: none;
+}
+.lada-menu-btn img{
+	width: 44px;
+}
+
+@media (max-width: 1199.98px) {
+	.lada-had-street {
+		display: none;
+	}
+}
+@media (max-width: 991.98px) {
+	.lada-had-time {
+		display: none;
+	}
+	.lada-menu-had{
+		display: none;
+	}
+	.lada-menu-btn {
+		display: block;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.lada-btn-hed {
+		display: none;
+	}
+}
+
+
+
+/*
+carousel bootstrap 5.2 
+*/
+.lada-grid {
+	display: grid;
+    /*align-content: space-between;*/
+    row-gap: 24px;
+}
+
+.lada-carousel {
+	background: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.lada-carousel .carousel-indicators button {
+	background: #D7D7D7;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    opacity: 1;
+    border: 0;
+    border-radius: 5px;
+}
+.lada-carousel .carousel-indicators button[aria-current="true"] {
+	background: var(--lada-grean);
+}
+.lada-carousel .carousel-indicators button[aria-current="true"]::before {
+	content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: 2px solid var(--lada-grean);
+    border-radius: 10px;
+    position: relative;
+    left: -5px;
+    top: -5px;
+}
+.lada-carousel-button {
+    background: #ccc;
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+}
+.lada-carousel-button::before {
+	content: '';
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    display: block;
+}
+.lada-carousel .carousel-control-prev-icon::before {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+.lada-carousel .carousel-control-next-icon::before {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.lada-carousel .carousel-control-next, .lada-carousel .carousel-control-prev {
+	align-items: flex-end;
+	bottom: 7px;
+	width: 0;
+}
+.lada-carousel .carousel-control-next {
+	right: 50px;
+}
+.lada-carousel .carousel-control-prev {
+	right: 100px;
+	left: auto;
+}
+
+@media (max-width: 991.98px) {
+	.lada-carousel .carousel-control-next, .lada-carousel .carousel-control-prev {
+		align-items: center;
+		bottom: 0;
+		width: 15%;
+	}
+	.lada-carousel .carousel-control-next {
+		right: 0;
+	}
+	.lada-carousel .carousel-control-prev {
+		right: auto;
+		left: 0;
+	}
+
+}
+@media (max-width: 767.98px) {
+	.lada-mb-grid {
+		margin-bottom: 24px;
+	}
+}
+
+.lada-menu-two div {
+	background: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 22px;
+}
+.lada-menu-two a {
+	text-decoration-line: none;
+    color: #000;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.lada-menu-two a::before{
+	content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #ccc;
+    left: 0;
+}
+.lada-menu-two a:first-child:before{
+	content: none;
+}
+
+@media (max-width: 991.98px) {
+	.lada-menu-two a:before{
+		content: none;
+	}
+	.lada-menu-two div{
+		flex-flow: wrap;
+	    background: none;
+	    box-shadow: none;
+	    overflow: unset;
+	    padding: 0;
+	}
+	.lada-menu-two a {
+		justify-content: center;
+		width: calc(33.3% - 10px);
+	    background: #fff;
+	    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    	border-radius: 20px;
+    	overflow: hidden;
+	    padding: 10px;
+	    margin: 10px 0;
+	}
+}
+@media (max-width: 767.98px) {
+	.lada-menu-two a {
+		width: calc(50% - 10px);
+	}
+}
+
+/*
+consultation
+*/
+
+.lada-consultation {
+	background: #FBE0E1;
+	padding: 35px 0;
+	text-align: center;
+}
+.lada-consultation div {
+	display: flex;
+    justify-content: space-between;
+}
+.lada-consultation p {
+	font-weight: 700;
+    color: var(--lada-red);
+    font-size: 23px;
+}
+
+.lada-input {
+	background: #fff;
+    font-size: 16px;
+    height: 44px;
+    border-radius: 100px;
+    padding: 9px 20px 9px 20px;
+    display: inline-flex;
+}
+.lada-input .line {
+    width: 2px;
+    height: 24px;
+    background: #ccc;
+    padding: 0;
+    margin: 0 10px;
+}
+.lada-input input{
+	border: 0;
+    outline: none;
+    font-size: 16px;
+    line-height: 24px;
+    height: 24px;
+}
+
+.lada-section-name {
+	font-weight: 400;
+	margin-top: 0;
+}
+.lada-section {
+	background: #F1F1F1;
+	padding: 50px 0;
+}
+
+
+
+/*
+slick-slide
+*/
+/* Слайдер */
+.slick-slider{
+	position: relative;
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow-x: hidden;
+	margin-bottom: 50px;
+	user-select: none;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+}
+/* Слайд */
+.slick-slide{
+	height: 400px;
+    margin: 0 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.slick-slide img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+
+/* Стрелка */
+.slick-arrow{
+	position: absolute;
+    bottom: 10px;
+    background: #ccc;
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    font-size: 0;
+    border: 0;
+    z-index: 10;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-arrow::before {
+	content: '';
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    display: block;
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev{
+	left: 10px;
+}
+.slick-arrow.slick-prev::before {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+	left: 54px;
+}
+.slick-arrow.slick-next::before {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки (булиты) */
+.slick-dots{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.slick-dots li{
+	list-style: none;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+/* Активная точка */
+.slick-dots li.slick-active{
+	border: 2px solid var(--lada-grean);
+}
+.slick-dots li.slick-active button{
+	background: var(--lada-grean);
+}
+/* Элемент точки */
+.slick-dots li button{
+	font-size: 0;
+    border: 0;
+    background: #ccc;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+}
+
+
+
+.lada-reviews-our-customers {
+	height: 300px;
+	background: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    transition: all 1s;
+}
+
+.lada-reviews-our-customers:hover {
+	height: auto;
+}
+
+.lada-reviews-our-slick .slick-list {
+	height: 300px;
+	position: relative;
+	overflow-x: clip;
+	z-index: 15;
+}
+
+.lada-reviews-our-slick .slick-track {
+	position: absolute;
+}
+
+.lada-reviews-our-customers a{
+	font-size: 18px;
+    color: var(--lada-grean);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.lada-reviews-our-customers p{
+	font-size: 18px;
+}
+
+.lada-reviews-our-customers p:nth-child(3) {
+	font-size: 16px;
+	text-align: center;
+}
+
+
+.lada-our-specialists .slick-list {
+	height: auto;
+}
+
+.lada-our-specialists-slide {
+	height: auto;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.lada-our-specialists-slide:hover {
+    color: #000;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lada-our-specialists-slide div {
+	border-radius: 20px;
+    overflow: hidden;
+}
+
+.lada-our-specialists-slide p:nth-child(3) {
+	color: #6B6B6B;
+}
+.lada-our-specialists-slide p:nth-child(4) {
+	color: var(--lada-red);
+}
+
+.lada-our-specialists .slick-dots li.slick-active{
+	border: 2px solid var(--lada-red);
+}
+.lada-our-specialists .slick-dots li.slick-active button{
+	background: var(--lada-red);
+}
+.all-specialists {
+	position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.lada-relative {
+	position: relative;
+}
+
+.lada-sign-reception {
+	background: red;
+    border-radius: 20px;
+}
+
+.lada-sign-reception div:nth-child(2){
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lada-sign-reception div:nth-child(2) .btn-light{
+	--bs-btn-color: var(--lada-red);
+}
+
+.lada-sign-reception div:nth-child(1){
+	padding: 20px 0px 0px 20px;
+    color: #fff;
+}
+
+.lada-sign-reception div:nth-child(1) h3{
+	font-weight: 700;
+}
+
+.lada-effectiveness-our-programs {
+	display: flex;
+	justify-content: space-between;
+    background: #fff;
+    border-radius: 20px;
+    width: 800px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1), 5px 5px 16px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    padding: 20px 40px;
+}
+
+.lada-effectiveness-our-programs div {
+	text-align: center;
+}
+
+.lada-effectiveness-our-programs h1 {
+	background: var(--lada-grean);
+    color: #fff;
+    padding: 3px 30px 10px 30px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 83px;
+}
+
+.lada-ef-our-prog-name {
+	background: #fff;
+    display: table;
+    margin: 50px auto 0;
+    border-radius: 20px;
+    padding: 5px 30px;
+}
+
+.lada-ef-our-prog-name p {
+	color: var(--lada-grean);
+    margin: 5px;
+}
+
+.lada-img-box {
+	height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.lada-img-box img {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lada-img-box .lada-number {
+	position: absolute;
+    z-index: 10;
+    left: 15px;
+    top: 15px;
+    background: var(--lada-grean);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    align-content: center;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.lada-img-box  .lada-img-box-btn, .lada-img-box h3{
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    left: 10%;
+    right: 10%;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lada-social {
+	position: absolute;
+    bottom: 120px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    visibility: hidden;
+}
+.lada-social a {
+	background: #fff;
+    color: var(--lada-font-gray);
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lada-social a:hover{
+	color: #000;
+}
+.where-to-start .lada-img-box-btn {
+	height: 100px;
+}
+
+.where-to-start .lada-img-box:hover .lada-social{
+	visibility: visible;
+}
+
+.lada-map {
+	position: relative;
+	height: 450px;
+}
+
+.lada-contacts {
+	width: 290px;
+	height: 350px;
+	background: #fff;
+	position: absolute;
+	right: 20%;
+	margin: 50px 0;
+	border-radius: 20px;
+	padding: 30px;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1), 5px 5px 16px rgba(0, 0, 0, 0.1);
+}
+
+.lada-contacts h3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+.lada-contacts h3:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--lada-grean);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.lada-contacts .lada-social {
+	visibility: visible;
+    position: revert;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.lada-contacts .lada-social a {
+    background: var(--lada-grean);
+    color: #fff;
+    margin: 5px;
+}
+
+.lada-contacts .lada-social a:hover {
+	color: #000;
+}
+
+
+.lada-menu-bottom {
+	display: grid;
+    grid-template-columns: 130px 130px 130px;
+}
+
+.lada-social-bottom {
+	position: revert;
+    visibility: visible;
+    justify-content: flex-start;
+}
+
+.lada-social-bottom a{
+	background: var(--lada-grean);
+    color: var(--lada-white);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+/*анімація лого*/
+.lada-container-logo-why-us {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    position: relative;
+    z-index: 5;
+}
+
+.logo-particles {
+	border: 4px solid #fafafa00;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+
+.center-particle {
+    border-radius: 50%;
+}
+.center-particle img {
+    width: 100%;
+    opacity: 0;
+    transition: all 1s;
+}
+.logo-particles-hover:hover, .logo-particles-active {
+	border: 4px solid var(--lada-grean);
+}
+
+.text-logo {
+	margin: 0;
+    padding: 0;
+    position: absolute;
+    font-size: 20px;
+    text-decoration: none;
+    color: #6B6B6B
+;
+}
+.text-logo:hover, .text-logo-active{ 
+	font-weight: bold;
+	cursor: pointer;
+	color: black;
+}
+
+
+
+
