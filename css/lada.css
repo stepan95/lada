@@ -704,8 +704,8 @@ slick-slide
 
 @media (max-width: 960px) {
 	.lada-sign-reception {
-		margin: 45px;
-		padding: 5px;
+		padding: 24px;
+/*    	margin: 15px;	*/
 	}
 	.lada-sign-reception-bloc {
 		display: grid;
@@ -777,7 +777,7 @@ slick-slide
 	    display: grid;
 	    justify-content: center;
 	    width: auto;
-	    margin: 45px;
+	    margin: 15px;
 	}
 }
 
@@ -915,10 +915,22 @@ slick-slide
 	color: #000;
 }
 
+@media (max-width: 1199.98px) {
+	.lada-contacts {
+		right: auto;
+	}
+	.lada-map{
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+}
+
 
 .lada-menu-bottom {
 	display: grid;
     grid-template-columns: 130px 130px 130px;
+    padding-left: 0;
 }
 
 .lada-social-bottom {
@@ -935,6 +947,18 @@ slick-slide
     border-radius: 20px;
 }
 
+@media (max-width: 1199.98px) {
+	.lada-center-bottom .lada-had-street {
+		display: flex;
+	}
+	.lada-center-bottom .lada-had-time {
+		display: flex;
+	}
+	.lada-social-bottom a {
+	    width: 25px;
+    	height: 25px;
+	}
+}
 @media (max-width: 960px) {
 	.lada-name-bottom {
 	    display: flex;
@@ -942,6 +966,8 @@ slick-slide
 	}
 	.lada-social-bottom {
 		justify-content: end;
+		padding: 0;
+		margin: 0;
 	}
 
 	.lada-menu-bottom {
@@ -953,19 +979,9 @@ slick-slide
     	justify-content: center;
 	}
 }
-
-@media (max-width: 1199.98px) {
-	.lada-center-bottom .lada-had-street {
-		display: flex;
-	}
-	.lada-center-bottom .lada-had-time {
-		display: flex;
-	}
-}
-@media (max-width: 1199.98px) {
-	.lada-social-bottom a {
-	    width: 25px;
-    	height: 25px;
+@media (max-width: 540px) {
+	.lada-name-bottom .lada-img-bottom {
+		width: 200px;
 	}
 }
 
