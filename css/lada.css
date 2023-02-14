@@ -69,6 +69,7 @@ all style
 }
 body {
 	background: #FAFAFA;
+/*	min-width: 550px;*/
 }
 hr {
 	margin: 5px 0 0 0;
@@ -346,9 +347,12 @@ consultation
 	padding: 35px 0;
 	text-align: center;
 }
-.lada-consultation div {
+.lada-consultation .lada-consultation-bloc {
 	display: flex;
     justify-content: space-between;
+}
+.lada-consultation .lada-consultation-bloc div{
+	display: contents;
 }
 .lada-consultation p {
 	font-weight: 700;
@@ -379,6 +383,31 @@ consultation
     height: 24px;
 }
 
+@media (max-width: 1140px) {
+	.lada-consultation .lada-consultation-bloc {
+		display: block;
+	}
+	.lada-consultation .lada-consultation-bloc div{
+		display: flex;
+    	justify-content: space-evenly;
+	}
+}
+@media (max-width: 960px) {
+	.lada-consultation .lada-consultation-bloc div{
+		display: inline-grid;
+	}
+	.lada-input, .lada-consultation-bloc a {
+		margin-top: 24px
+		;
+	}
+	.lada-consultation p {
+		margin: 0;
+	}
+}
+
+/*                                      */
+
+
 .lada-section-name {
 	font-weight: 400;
 	margin-top: 0;
@@ -387,7 +416,6 @@ consultation
 	background: #F1F1F1;
 	padding: 50px 0;
 }
-
 
 
 /*
@@ -477,16 +505,19 @@ slick-slide
     justify-content: center;
     align-items: center;
     height: 50px;
+    padding-left: 0;
 }
 .slick-dots li{
 	list-style: none;
     margin: 0 5px;
     width: 20px;
     height: 20px;
-    position: relative;
     border-radius: 10px;
     border: 2px solid #fff;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Активная точка */
 .slick-dots li.slick-active{
@@ -503,10 +534,15 @@ slick-slide
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    position: absolute;
-    top: 3px;
-    left: 2px;
 }
+
+@media (max-width: 720px) {
+	.lada-section-slider {
+		padding: 0;
+	}
+}
+
+/*       */
 
 
 
@@ -590,20 +626,35 @@ slick-slide
     bottom: 10px;
     right: 10px;
 }
-
 .lada-relative {
 	position: relative;
 }
+@media (max-width: 960px) {
+	.all-specialists {
+		position: relative;
+	}
+	.lada-our-specialists-bloc {
+		text-align: center;
+	}
+}
+
+
+
+/*ЗАПИШІТЬСЯ НА ПРИЙОМ ДО ЛІКАРЯ-РЕПРОДУКТОЛОГА*/
 
 .lada-sign-reception {
 	background: red;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.lada-sign-reception div:nth-child(2){
-	display: flex;
-    justify-content: space-between;
-    align-items: center;
+.lada-sign-reception .lada-sign-reception-name {
+	width: 400px;
+}
+.lada-sign-reception-bloc {
+	display: contents;
 }
 
 .lada-sign-reception div:nth-child(2) .btn-light{
@@ -617,7 +668,71 @@ slick-slide
 
 .lada-sign-reception div:nth-child(1) h3{
 	font-weight: 700;
+	font-size: 25px;
 }
+
+.lada-sign-reception-bloc label:nth-child(1) {
+	max-width: 200px;
+}
+.lada-sign-reception-bloc label:nth-child(1) input{
+	max-width: 170px;
+}
+
+.lada-sign-reception-bloc label:nth-child(2) {
+	max-width: 250px;
+}
+.lada-sign-reception-bloc label:nth-child(2) input{
+	max-width: 170px;
+}
+
+@media (max-width: 1140px) {
+	.lada-sign-reception {
+		display: block;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.lada-sign-reception .lada-sign-reception-name {
+		width: auto;
+		margin: auto;
+	}
+	.lada-sign-reception .lada-sign-reception-name p{
+		display: none;
+	}
+	
+	
+}
+
+@media (max-width: 960px) {
+	.lada-sign-reception {
+		margin: 45px;
+		padding: 5px;
+	}
+	.lada-sign-reception-bloc {
+		display: grid;
+	    justify-items: stretch;
+	    justify-content: center;
+	}
+	.lada-sign-reception-bloc label:nth-child(1) {
+		max-width: none;
+	}
+	.lada-sign-reception-bloc label:nth-child(1) input{
+		max-width: none;
+	}
+	.lada-sign-reception-bloc .lada-input {
+		margin-bottom: 24px;
+		margin-top: 0;
+	}
+	.lada-sign-reception div:nth-child(1){
+		padding: 0;
+	}
+}
+
+
+
+/*											*/
+
+
+
 
 .lada-effectiveness-our-programs {
 	display: flex;
@@ -655,6 +770,19 @@ slick-slide
 	color: var(--lada-grean);
     margin: 5px;
 }
+
+
+@media (max-width: 960px) { 
+	.lada-effectiveness-our-programs {
+	    display: grid;
+	    justify-content: center;
+	    width: auto;
+	    margin: 45px;
+	}
+}
+
+
+/*            */
 
 .lada-img-box {
 	height: 300px;
@@ -807,15 +935,51 @@ slick-slide
     border-radius: 20px;
 }
 
+@media (max-width: 960px) {
+	.lada-name-bottom {
+	    display: flex;
+	    justify-content: space-between;
+	}
+	.lada-social-bottom {
+		justify-content: end;
+	}
+
+	.lada-menu-bottom {
+		text-align: center;
+	    justify-content: center;
+	}
+	.lada-center-bottom {
+	    display: grid;
+    	justify-content: center;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.lada-center-bottom .lada-had-street {
+		display: flex;
+	}
+	.lada-center-bottom .lada-had-time {
+		display: flex;
+	}
+}
+@media (max-width: 1199.98px) {
+	.lada-social-bottom a {
+	    width: 25px;
+    	height: 25px;
+	}
+}
 
 
 
 
 
 /*анімація лого*/
+.lada-section-logo {
+	overflow: hidden;
+}
 .lada-container-logo-why-us {
     height: 500px;
-    width: 500px;
+    width: 350px;
     margin: auto;
     position: relative;
     z-index: 5;
@@ -857,6 +1021,13 @@ slick-slide
 	cursor: pointer;
 	color: black;
 }
+
+@media (max-width: 1140px) {
+	.text-logo {
+		display: none;
+	}
+}
+
 
 
 
