@@ -638,6 +638,13 @@ slick-slide
 	}
 }
 
+@media (max-width: 720px) { 
+	.lada-reviews {
+		display: flex;
+    	justify-content: space-around;
+	}
+}
+
 
 
 /*ЗАПИШІТЬСЯ НА ПРИЙОМ ДО ЛІКАРЯ-РЕПРОДУКТОЛОГА*/
