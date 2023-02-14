@@ -990,6 +990,9 @@ slick-slide
 	.lada-name-bottom .lada-img-bottom {
 		width: 200px;
 	}
+	.lada-menu-bottom {
+	    grid-template-columns: 120px 120px 120px;
+	}
 }
 
 
