@@ -133,6 +133,9 @@ nav had
 	color: var(--lada-grean);
     text-decoration: underline;
 }
+.lada-menu-had {
+	position: relative;
+}
 .lada-menu-had li {
 	list-style: none;
     margin: 10px;
@@ -153,6 +156,34 @@ nav had
 	width: 100%;
 	transition: width 0.3s;
 }
+.lada-menu-had li ul {
+	display: block;
+	position: absolute;
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+	z-index: 10;
+	padding-left: 0;
+	padding: 20px;
+	scale: 0;	
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s;
+}
+.lada-menu-had li:hover ul {
+	scale: 1;
+	opacity: 1;
+	visibility: visible;
+}
+.lada-menu-had .lada-nested-menu:after {
+	content: '';
+	background-image: url(../icon/rounded-down.svg);
+	background-size: 10px 10px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+}
+
 .lada-menu-btn {
 	border: 0;
     background: #fff;
@@ -174,6 +205,8 @@ nav had
 	}
 	.lada-menu-had{
 		display: none;
+	    flex-direction: column;
+	    align-items: center;
 	}
 	.lada-menu-btn {
 		display: block;

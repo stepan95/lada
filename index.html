@@ -43,7 +43,7 @@
         <div class="lada-items-center">
           <span class="lang px-2 lang-active">UA</span>
           <span class="lang px-2">RU</span>
-          <button class="lada-menu-btn"><img src="icon/menu-btn.svg"></button>
+          <button class="lada-menu-btn" id="lada-menu-btn"><img src="icon/menu-btn.svg"></button>
         </div>
       </div>
       <hr>
@@ -52,7 +52,14 @@
         <ul class="lada-menu-had lada-nav">
           <li><a class="text-dark" href="#">ГОЛОВНА</a></li>
           <li><a class="text-dark" href="#">ПОСЛУГИ</a></li>
-          <li><a class="text-dark" href="#">ЦІНИ</a></li>
+          <li class="lada-nested-menu"><a class="text-dark" href="#">ЦІНИ</a>
+            <ul>
+              <li><a class="text-dark" href="#">Ціна 10</a></li>
+              <li><a class="text-dark" href="#">Ціна 20</a></li>
+              <li><a class="text-dark" href="#">Ціна 30</a></li>
+              <li><a class="text-dark" href="#">Ціна 40</a></li>
+            </ul>
+          </li>
           <li><a class="text-dark" href="#">ЛІКАРІ</a></li>
           <li><a class="text-dark" href="#">РОЗКЛАД</a></li>
           <li><a class="text-dark" href="#">ВІДГУКИ</a></li>
@@ -501,6 +508,12 @@
     <script type="text/javascript" src="js/slick.min.js"></script>
 
     <script type="text/javascript">
+      $('#lada-menu-btn').click(function(event) {
+        if ( $('.lada-menu-had')[0].style.display == 'flex') 
+          $('.lada-menu-had')[0].style.display = 'none';
+        else 
+          $('.lada-menu-had')[0].style.display = 'flex';
+      });
       $(document).ready(function(){
         $('.your-class').slick({
           arrows: true,
