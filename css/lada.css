@@ -56,7 +56,7 @@ bootstrap 5.2
 	border-radius: 100px;
 	padding: 10px 20px 10px 20px;
 	--bs-btn-border-width: 2px;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 18px;
 }
 
@@ -92,10 +92,16 @@ nav had
     justify-content: space-between;
     padding: 0;
 }
+.lada-nav {
+	font-size: 14px;
+}
 
 .lada-container-logo {
-	min-width: 170px;
+	width: 150px;
 	text-decoration: none;
+}
+.lada-container-logo img {
+	width: 100%;
 }
 
 /*.lada-name {
@@ -126,8 +132,11 @@ nav had
 }
 
 .lada-list-nav p {
-	font-size: 16px;
+	font-size: 14px;
 	margin: 0;
+}
+.lang {
+	font-size: 14px;
 }
 .lang-active {
 	color: var(--lada-grean);
@@ -390,12 +399,12 @@ consultation
 .lada-consultation p {
 	font-weight: 700;
     color: var(--lada-red);
-    font-size: 23px;
+    font-size: 22px;
 }
 
 .lada-input {
 	background: #fff;
-    font-size: 16px;
+    font-size: 14px;
     height: 44px;
     border-radius: 100px;
     padding: 9px 20px 9px 20px;
@@ -411,7 +420,7 @@ consultation
 .lada-input input{
 	border: 0;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
     height: 24px;
 }
@@ -438,7 +447,7 @@ consultation
 	}
 }
 
-/*                                      */
+/*   */
 
 
 .lada-section-name {
@@ -575,8 +584,7 @@ slick-slide
 	}
 }
 
-/*       */
-
+/*  Відгуки наших клієнтів */
 
 
 .lada-reviews-our-customers {
@@ -769,9 +777,7 @@ slick-slide
 
 
 
-/*											*/
-
-
+/* Секція досвід роботи (лічильник) */
 
 
 .lada-effectiveness-our-programs {
