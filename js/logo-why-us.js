@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('load', function() {
 	const ladaLogo = document.getElementById('lada-container-logo-why-us');
 	const width = ladaLogo.offsetWidth;
 	const height = ladaLogo.offsetHeight;
@@ -258,6 +258,6 @@ window.onload = function() {
 	}
 	logoActive.point();
 	logoActive.text();
-};
+});
 
 
