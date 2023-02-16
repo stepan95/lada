@@ -793,6 +793,7 @@ slick-slide
 
 .lada-effectiveness-our-programs div {
 	text-align: center;
+	transition: all 2s;
 }
 
 .lada-effectiveness-our-programs h1 {
@@ -1092,8 +1093,3 @@ slick-slide
 		display: none;
 	}
 }
-
-
-
-
-
