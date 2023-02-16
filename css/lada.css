@@ -247,6 +247,11 @@ carousel bootstrap 5.2
     height: 100%;
 }
 
+/*на wp потрібно подумати тимчасовий варіант*/
+.lada-carousel img {
+    aspect-ratio: 19 / 12;
+}
+
 .lada-carousel .carousel-indicators button {
 	background: #D7D7D7;
     width: 10px;
@@ -647,6 +652,7 @@ slick-slide
 .lada-our-specialists-slide div {
 	border-radius: 20px;
     overflow: hidden;
+    min-height: 250px;
 }
 
 .lada-our-specialists-slide p:nth-child(3) {
