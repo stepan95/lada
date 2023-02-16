@@ -1,12 +1,18 @@
 window.addEventListener('load', function() {
 	const brush = document.querySelectorAll('.brush');
+
+	// Дізнаємося ширину та починаємо рахунок з 0
+	function widht(brush) {
+		for(let i = 0; i < brush.length; i++){
+			brush[i].style.width = brush.clientWidth+'px';
+			brush[i].setAttribute('data-brushmax', brush.textContent);
+			brush[i].textContent = 0;
+		}
+	}
+	widht(brush);
+
 	// Лічильник збільшення до максимум
 	function brushUp(brush) {
-		// Дізнаємося ширину та починаємо рахунок з 0
-		brush.style.width = brush.clientWidth+'px';
-		brush.setAttribute('data-brushmax', brush.textContent);
-		brush.textContent = 0;
-
 		const time = (100000 / Number(brush.dataset.brushmax)/10);
 		const id = setInterval(function() {
 			if (Number(brush.dataset.brushmax) > brush.textContent) brush.textContent++;
