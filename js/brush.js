@@ -4,8 +4,8 @@ window.addEventListener('load', function() {
 	// Дізнаємося ширину та починаємо рахунок з 0
 	function widht(brush) {
 		for(let i = 0; i < brush.length; i++){
-			brush[i].style.width = brush.clientWidth+'px';
-			brush[i].setAttribute('data-brushmax', brush.textContent);
+			brush[i].style.width = brush[i].clientWidth+'px';
+			brush[i].setAttribute('data-brushmax',brush[i].textContent);
 			brush[i].textContent = 0;
 		}
 	}
